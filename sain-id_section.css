@@ -1,0 +1,146 @@
+/*
+    Meta Information
+    -----------------
+    Author: Ben Wilhelm
+    Version: 1.2.1
+    Created: 2024-11-18
+    Description: CSS-Datei für den Sain.ID-Bereich der Sain Community Webseite.
+    Enthält alle Styles für das Profil, die Seitenleiste, und die Darstellung von Benutzerinformationen im Sain.ID-Bereich.
+    -----------------
+*/
+
+/* Sain.ID Section */
+
+.profile-section {
+    display: flex;
+    gap: 30px;
+    padding: 100px 50px 50px 50px;
+    background-color: var(--dg-bg);
+    height: 800px;
+}
+
+.profile-sidebar {
+    width: 230px;
+    background-color: var(--dgo-bg);
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between for flex layout */
+    height: calc(100% - 40px); /* Reduce height to better fit the page */
+    max-height: 800px; /* Set a maximum height to avoid overflow */
+}
+
+.profile-header-sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    background-color: var(--gray);
+    border-radius: 30px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.profile-header-sidebar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-header-sidebar .user-info {
+    display: flex;
+    flex-grow: 1;
+    color: #fff;
+}
+
+.profile-header-sidebar .user-info .user-name {
+    font-weight: bold;
+    font-size: 1em;
+    margin-right: auto;
+}
+
+.profile-header-sidebar .user-info .user-id {
+    font-size: 0.9em;
+    color: var(--txt-lg);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-right: 10px;
+}
+
+.profile-header-sidebar .user-info .user-id::before {
+    content: '|';
+    color: var(--txt-lg);
+}
+
+.profile-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* Take up available space */
+}
+
+.profile-menu .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 8px;
+    font-size: 1em;
+    color: var(--txt-lg);
+    cursor: pointer;
+}
+
+.profile-menu .menu-item.active {
+    color: var(--s-blue);
+}
+
+.profile-menu .menu-item:hover {
+    background-color: var(--gray);
+    color: var(--s-blue);
+    border-radius: 5px;
+}
+.profile-menu a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-menu .menu-item:hover a {
+    color: #fff; /* Ändert die Textfarbe beim Hover */
+} 
+
+.settings-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    font-size: 1em;
+    color: var(--txt-lg);
+    cursor: pointer;
+    margin-top: auto; /* Push to the bottom */
+}
+
+.settings-item:hover {
+    background-color: var(--gray);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.profile-content {
+    flex: 3;
+    background-color: var(--dgo-bg);
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.profile-content h2 {
+    margin: 4px 0px 0px 0px;
+    font-size: 1.2em;
+}
+

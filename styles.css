@@ -1,0 +1,176 @@
+/*
+    Meta Information
+    -----------------
+    Author: Ben Wilhelm
+    Version: 1.2.1
+    Created: 2024-11-18
+    Description: Meta CSS-Datei zur Einbindung und Strukturierung von modularen CSS-Dateien für die Sain Community Webseite
+    -----------------
+*/
+
+/* Einbindung der modularen CSS-Dateien */
+
+/* Navigation */
+@import url('navigation.css');
+
+/* Header Banner */
+@import url('header-banner.css');
+
+/* Banner Overlay */
+@import url('banner-overlay.css');
+
+/* Discords Section */
+@import url('discord-section.css');
+
+/* Events Section */
+@import url('events-section.css');
+
+/* Newsletter Section */
+@import url('newsletter-section.css');
+
+/* Sain.ID Section */
+@import url('sain-id_section.css');
+
+/* Sain.ID Profile Section */
+@import url('sain-id_profile-section.css');
+
+/* Sain.ID Transactions Section */
+@import url('sain-id_transaction-section.css');
+
+/* Footer Overlay */
+@import url('footer.css');
+
+
+:root {
+    --dgo-bg: #111111; /* dark gray object background */
+    --gray: #3a3a3a; /* gray */
+    --dg-bg: #1a1a1a; /* dark gray background */
+    --lg: #4d4d4d; /* light gray */
+    --g-bg: #2d2d2d; /* gray background */
+    --txt-lg: #b9b9b9; /* text light gray */
+    --s-red: #ff004e; /* Sain red */
+    --s-blue: #00d2ff; /* Sain blue */
+    --smcs: #1db53c; /* SMCS S9 */
+    --s-league: #00F59B; /* Sain league */
+    --font-primary: 'Roboto', Arial, sans-serif; /* Primäre Schriftart für die gesamte Seite */
+    --active-green: #00FF33;
+    --inactive-red: #FF0000;
+}
+
+/* Allgemeine Stile */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    background-color: var(--dg-bg);
+    color: #fff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 
+    =======================================
+    ======== Navigation Stylesheet ========
+    =======================================
+*/
+
+/* 
+    =======================================
+    ======== Banner Overlay Stylesheet ====
+    =======================================
+*/
+
+/* 
+    =======================================
+    ======== Header Banner Stylesheet =====
+    =======================================
+*/
+
+/* 
+    =======================================
+    ======== Discords Section Stylesheet ==
+    =======================================
+*/
+
+/* 
+    =======================================
+    ======== Events Section Stylesheet ====
+    =======================================
+*/
+
+/* 
+    =======================================
+    ======== Newsletter Section Stylesheet 
+    =======================================
+*/
+
+/* Preview Section */
+.preview-section {
+    background-color: var(--dgo-bg); /* Dark gray background */
+    padding: 50px 100px;
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Abstand zwischen Video und Bildern */
+}
+
+/* Video Container */
+.video-container {
+    flex: 2;
+    aspect-ratio: 16 / 9; /* Stellt sicher, dass das Video im 16:9-Verhältnis bleibt */
+    width: 100%; /* Dynamische Anpassung der Breite */
+    max-width: 800px; /* Optional: maximale Breite */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Fügt dem Video-Container einen Schatten hinzu */
+}
+
+.responsive-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Images Preview */
+.images-preview {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+/* Einzelne Bilder */
+.images-preview img {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Hält die Bilder im 16:9-Format */
+    object-fit: cover; /* Schneidet die Bilder zu, um das Seitenverhältnis beizubehalten */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Fügt den Bildern einen Schatten hinzu */
+}
+
+/* 
+    =======================================
+    ======== Sain.ID Section Stylesheet 
+    =======================================
+*/
+
+/* 
+    =======================================
+    ======== Sain.ID Profile Section Stylesheet 
+    =======================================
+*/
+
+/* 
+    =======================================
+    ======== Sain.ID Transactions Section Stylesheet 
+    =======================================
+*/
+
+/* 
+    =======================================
+    ======== Footer Stylesheet ============
+    =======================================
+*/

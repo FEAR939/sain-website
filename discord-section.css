@@ -1,0 +1,95 @@
+/*
+    Meta Information
+    -----------------
+    Author: Ben Wilhelm
+    Version: 1.2.1
+    Created: 2024-11-18
+    Description: CSS-Datei für den Sain Discords Bereich der Sain Community Webseite.
+    Enthält alle Stile für die Darstellung der Discord-Karten, einschließlich Layout, Status, und Buttons zum Beitreten.
+    -----------------
+*/
+
+/* Discords Section */
+
+.discord-section {
+    padding: 40px 140px;
+    text-align: center;
+    background-color: var(--g-bg);
+}
+
+.discord-section h2 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.discord-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Verteilt die Karten gleichmäßig über die gesamte Breite */
+    gap: 20px; /* Definiert den Abstand zwischen den Karten, passe diesen Wert nach Bedarf an */
+    width: 100%; /* Stellt sicher, dass der Container die gesamte Breite des übergeordneten Elements einnimmt */
+    margin-top: 30px;
+    margin-bottom: 30px; /* Abstand von 30px zwischen dem Container und dem Link */
+}
+
+.discord-card {
+    background-color: var(--dgo-bg);
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.discord-card h3 {
+    font-size: 1.2em;
+    margin: 0 0 10px;
+}
+
+.discord-info {
+    font-size: 0.9em;
+    color: var(--txt-lg);
+}
+
+.discord-info .status {
+    color: var(--s-league);
+}
+
+.discord-info .members {
+    margin-left: 15px;
+    color: var(--txt-lg);
+}
+
+.discord-card img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.join-discord-btn {
+    width: -moz-available;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: var(--dg-bg);
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.join-discord-btn:hover {
+    background-color: var(--g-bg);
+    color: var(--s-blue);
+}
+
+.discord-more-info {
+    margin-top: 30px;
+    font-size: 1em;
+    color: var(--txt-lg);
+}

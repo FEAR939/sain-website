@@ -1,0 +1,9 @@
+SMCS S9
+
+- News Bereich hat keine Newsletter Überschrift
+- Der Status Bereich ist falsch eingefärbt
+
+
+Sain.ID
+
+Im Bereich Sain.ID in der sidebar, sind nur die texte als Buttons formatiert, die eingegrauten button flächen jedoch nicht.

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sain Community - Events - SMCS_S9</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Font Awesome Link for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<!-- Navigation -->
+<header>
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="source/logos/Sain_Logo_circle_white_protection_zone_SVG.svg" alt="Sain Logo" class="logo-img">
+        </div>
+        <div class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="socials.html">Socials</a></li>
+                <li><a href="sain-league.html" class="highlight">Sain League</a></li>
+            </ul>
+        </div>
+        <div class="user-actions">
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-bar">
+                <i class="search-icon fas fa-search"></i>
+            </div>
+            <div class="user-info">
+                <span class="user-name">Ben.Sain</span>
+                <img src="source/images/FuK9icGaYAE13GS-scaled.jpeg" alt="Benutzerprofil" class="user-icon">
+            </div>
+        </div>
+    </nav>    
+</header>
+
+<section class="profile-section">
+    <div class="profile-sidebar">
+        <div class="profile-header-sidebar">
+            <img src="source/images/FuK9icGaYAE13GS-scaled.jpeg" alt="Benutzerprofil">
+            <div class="user-info">
+                <span class="user-name">Ben.Sain</span>
+                <span class="user-id">#1</span>
+            </div>
+        </div>
+        <ul class="profile-menu">
+            <li class="menu-item active"><a href="sain_id_profile.html"><i class="fas fa-user"></i> Profile</a></li>
+            <li class="menu-item"><a href="sain_id_transactions.html"><i class="fas fa-coins"></i> Transactions</a></li>
+            <li class="menu-item"><a href="active-purchases.html"><i class="fas fa-shopping-cart"></i> Active purchases</a></li>
+            <li class="menu-item"><a href="badge.html"><i class="fas fa-certificate"></i> Badge</a></li>
+            <li class="menu-item"><a href="shop.html"><i class="fas fa-store"></i> Shop</a></li>
+            <li class="menu-item"><a href="sain-league-team.html"><i class="fas fa-trophy"></i> Sain League Team</a></li>
+            <li class="menu-item"><a href="friends.html"><i class="fas fa-user-friends"></i> Friends</a></li>
+        </ul>        
+        <!-- Settings Button at the bottom -->
+        <div class="settings-item">
+            <i class="fas fa-cog"></i> Settings
+        </div>
+    </div>
+
+
+    <div class="profile-content">
+        <div class="profile-header">
+            <div class="profile-banner">
+                <img src="source/images/Sain_Magenta_Cyan_Bear_Wallpaper.jpg" alt="Profile Banner">
+                <!-- Profile Controls -->
+                <div class="profile-banner-controls">
+                    <div class="daily-bonus">
+                        <span>2</span> <i class="fas fa-gift"></i><!-- Tagesbonus -->
+                    </div>
+                    <div class="account-balance">
+                        <span>420</span> <i class="fas fa-coins"></i> <!-- Kontostand -->
+                    </div>
+                    <div class="profile-settings">
+                        <i class="fas fa-cog"></i> <!-- Profileinstellungen -->
+                    </div>
+                </div>
+            </div>
+            <div class="profile-picture">
+                <img src="source/images/FuK9icGaYAE13GS-scaled.jpeg" alt="Profile Picture">
+            </div>
+        </div>
+
+        <div class="profile-details">
+            <div class="profile-info">
+                <div class="input-group">
+                    <label for="first-name">Vorname</label>
+                    <input type="text" id="first-name" value="Ben">
+                </div>
+                <div class="input-group">
+                    <label for="last-name">Nachname</label>
+                    <input type="text" id="last-name" value="Sain">
+                </div>
+                <div class="input-group">
+                    <label for="birthday">Alter</label>
+                    <div class="input-icon-group">
+                        <input type="date" id="birthday" value="2004-07-12">
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="display-name">Anzeigename</label>
+                    <div class="input-icon-group">
+                        <input type="text" id="display-name" value="Ben.Sain">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" value="sain.mgt@gmail.com">
+                </div>
+                <div class="input-group">
+                    <label for="password">Passwort</label>
+                    <div class="input-icon-group">
+                        <input type="password" id="password" value="********">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linked-accounts">
+                <h3>Linked Accounts</h3>
+                <div class="linked-account">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                    <input type="text" value="Ben.Sain" readonly>
+                    <button class="copy-btn">Copy ID</button>
+                </div>
+                <div class="linked-account">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Minecraft</span>
+                    <input type="text" value="Ben_Sain" readonly>
+                </div>
+                <div class="linked-account">
+                    <i class="fab fa-epic-games"></i>
+                    <span>Epic Games</span>
+                    <input type="text" value="Ben.Sain" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Sites menu</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Discord</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Sain Discord</h3>
+            <ul>
+                <li><a href="#">Sain Community</a></li>
+                <li><a href="#">Sain GTA VI</a></li>
+                <li><a href="#">Sain Minecraft</a></li>
+                <li><a href="#">Sain Rainbow 6 Siege</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Events</h3>
+            <ul>
+                <li><a href="#">Sain Minecraft Community Server | Season 9</a></li>
+                <li><a href="#">Sain League | Tournaments</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>About</h3>
+            <ul>
+                <li><a href="#">What is Sain?</a></li>
+                <li><a href="#">Impressum</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+                <li><a href="#">Email</a></li>
+                <li><a href="#">Socials</a></li>
+                <li><a href="#">Upload your Clips</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Sain Coin</h3>
+            <ul>
+                <li><a href="#">Balance</a></li>
+                <li><a href="#">Transactions</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Sain ID</h3>
+            <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Transactions</a></li>
+                <li><a href="#">Active purchases</a></li>
+                <li><a href="#">Badges</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul>
+        </div>
+        <div class="footer-social-icons">
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="x-icon.png" alt="X"></a>
+            <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+            <a href="#"><img src="discord-icon.png" alt="Discord"></a>
+            <a href="#"><img src="reddit-icon.png" alt="Reddit"></a>
+            <a href="#"><img src="tiktok-icon.png" alt="TikTok"></a>
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript Einbindung -->
+<script src="script.js"></script>
+
+</body>
+</html>

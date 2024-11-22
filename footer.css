@@ -1,0 +1,68 @@
+/*
+    Meta Information
+    -----------------
+    Author: Ben Wilhelm
+    Version: 1.2.1
+    Created: 2024-11-18
+    Description: CSS-Datei für den Footer der Sain Community Webseite.
+    Enthält alle Stile für den Footer-Bereich, inklusive Layout, Links, und soziale Medien-Icons.
+    -----------------
+*/
+
+/* Footer */
+
+footer {
+    background-color: var(--dgo-bg);
+    padding: 20px 0;
+    color: #fff;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.footer-section ul li a:hover {
+    color: #4caf50;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-social-icons a img {
+    width: 30px;
+    height: 30px;
+}

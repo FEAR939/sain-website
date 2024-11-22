@@ -1,0 +1,164 @@
+/*
+    Meta Information
+    -----------------
+    Author: Ben Wilhelm
+    Version: 1.2.1
+    Created: 2024-11-18
+    Description: CSS-Datei für den Events-Bereich der Sain Community Webseite.
+    Enthält alle Stile für die Darstellung von Event-Karten, Event-Details und die gesamte Anordnung und Struktur der Events.
+    -----------------
+*/
+
+/* Events Section */
+
+.events-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--dg-bg);
+}
+
+.events-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.event-card {
+    background-color: var(--dgo-bg);
+    border-radius: 10px;
+    width: 520px;
+    height: 416px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative; /* Ermöglicht die absolute Positionierung der inneren Elemente */
+}
+
+.event-image-container {
+    width: 100%;
+    height: 0;
+    padding-top: 40%; /* Entspricht einem Verhältnis von 1 : 2.5 (1 / 2.5 = 0.4) */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Optional: Rundung für die Bildecken */
+}
+
+.event-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Stellt sicher, dass das Bild den Container ausfüllt, ohne Verzerrungen */
+}
+
+
+.event-content {
+    padding: 20px;
+}
+
+.event-content h3 {
+    font-size: 1.2em;
+    margin: 0 0 10px;
+    color: #fff;
+}
+
+/* Allgemeine Stile für Event-Tags */
+.event-tag {
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px; /* Optional für abgerundete Kanten */
+}
+
+/* Spezifische Farben für die verschiedenen Event-Tags */
+.smcs-tag {
+    color: var(--smcs); /* Verwende SMCS Grün */
+}
+
+.overwatch-tag {
+    color: var(--s-blue); /* Verwende Blau für Overwatch */
+}
+
+.sain-league-tag {
+    color: var(--s-league); /* Verwende das Sain League Grün */
+}
+
+.event-content p {
+    font-size: 1em;
+    margin: 0 0 15px;
+    color: var(--txt-lg);
+}
+
+.event-info {
+    position: absolute;
+    bottom: 20px; /* Positioniere den event-info-Container 10px vom unteren Rand entfernt */
+    left: 20px; /* Platzierung von links */
+    right: 20px; /* Platzierung von rechts, damit beide Elemente entsprechend verteilt werden */
+    display: flex;
+    justify-content: space-between; /* Verteilt die Elemente gleichmäßig */
+    align-items: center;
+}
+
+.event-info .status {
+    font-size: 0.9em;
+}
+
+.event-info .event-icon {
+    font-size: 1.2em;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination .dot {
+    width: 12px;
+    height: 12px;
+    background-color: var(--lg);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.pagination .dot.active {
+    background-color: var(--s-blue);
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* Aktiv - Server ist online */
+.status-active .status-icon {
+    color: var(--active-green); /* Setze die Farbe des Kreises auf grün */
+}
+
+.status-active .status-text {
+    color: var(--txt-lg); /* Setze die Farbe des Textes auf light gray */
+}
+
+/* Inaktiv - Server ist noch nicht online */
+.status-inactive .status-icon {
+    color: var(--inactive-red); /* Setzt die Farbe des Icons auf rot */
+}
+
+.status-inactive .status-text {
+    color: var(--txt-lg); /* Setzt die Farbe des Textes auf light gray */
+}
+
+/* Bereits vorbei - Event ist abgeschlossen */
+.status-over .status-icon {
+    color: var(--txt-lg); /* Setzt die Farbe des Icons auf light gray */
+}
+
+.status-over .status-text {
+    color: var(--txt-lg); /* Setzt die Farbe des Textes auf light gray */
+}

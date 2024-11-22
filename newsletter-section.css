@@ -1,0 +1,109 @@
+/*
+    Meta Information
+    -----------------
+    Author: Ben Wilhelm
+    Version: 1.2.1
+    Created: 2024-11-18
+    Description: CSS-Datei für den Newsletter-Bereich der Sain Community Webseite.
+    Enthält alle Styles für die Darstellung der Newsletter-Karten, die Anordnung der Elemente und deren responsive Anpassung.
+    -----------------
+*/
+
+/* Newsletter Section */
+
+.newsletter-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--g-bg);
+}
+
+.newsletter-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.newsletter-card {
+    background-color: var(--dgo-bg);
+    border-radius: 10px;
+    width: calc(50% - 15px); /* Zwei Karten pro Zeile */
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+.newsletter-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.newsletter-content {
+    padding: 20px;
+}
+
+.newsletter-content h3 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+    color: var(--s-blue);
+}
+
+.newsletter-content p {
+    font-size: 1em;
+    margin: 0 0 15px;
+    color: var(--txt-lg);
+}
+
+.newsletter-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--txt-lg);
+    margin-bottom: 10px;
+}
+
+.newsletter-info .author-info,
+.newsletter-info .status-info {
+    font-size: 0.9em;
+}
+
+.newsletter-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: var(--txt-lg);
+}
+
+.newsletter-actions i {
+    cursor: pointer;
+}
+
+.newsletter-actions i:hover {
+    color: var(--s-blue);
+}
+
+.more-info-btn {
+    margin-left: auto;
+    padding: 10px;
+    text-decoration: none;
+    background-color: var(--s-blue);
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.more-info-btn:hover {
+    background-color: #00b8e6;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}

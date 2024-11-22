@@ -1,0 +1,29 @@
+/*
+    Meta Information
+    -----------------
+    Author: Ben Wilhelm
+    Version: 1.2.1
+    Created: 2024-11-18
+    Description: CSS-Datei für den Header-Banner-Bereich der Sain Community Webseite.
+    Enthält alle Styles für die Gestaltung des Header-Banners, einschließlich der Bannerbilder, Overlays, Titel und responsive Anpassungen.
+    -----------------
+*/
+
+/* Header Banner */
+
+.header-banner {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.header-banner .banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}

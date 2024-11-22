@@ -1,0 +1,201 @@
+/*
+    Meta Information
+    -----------------
+    Author: Ben Wilhelm
+    Version: 1.2.1
+    Created: 2024-11-18
+    Description: CSS-Datei für den Sain.ID-Bereich der Sain Community Webseite.
+
+    -----------------
+*/
+
+/* Sain.ID Profile Section */
+
+.profile-header {
+    display: flex;
+    position: relative;
+}
+
+.profile-banner {
+    position: relative;
+}
+
+.profile-banner img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 3; /* Breiter, aber kürzer als 16:9 */
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.profile-banner-controls {
+    position: absolute;
+    bottom: -50px; /* Align to the bottom of the profile picture */
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-banner-controls .daily-bonus,
+.profile-banner-controls .account-balance,
+.profile-banner-controls .profile-settings {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.profile-banner-controls .daily-bonus span,
+.profile-banner-controls .account-balance span {
+    margin-right: 5px;
+}
+
+.profile-banner-controls .daily-bonus i,
+.profile-banner-controls .account-balance i {
+    background: linear-gradient(to bottom, var(--s-red), var(--s-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile-banner-controls .profile-settings {
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+.profile-picture {
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--dgo-bg);
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-details {
+    display: flex;
+    margin-top: 80px;
+    gap: 20px;
+}
+
+/* Profile Info Styling */
+.profile-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 650px;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: var(--txt-lg);
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    padding: 10px;
+    background-color: var(--gray);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    width: 100%;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+    box-shadow: 0 0 10px var(--s-blue);
+    outline: none;
+}
+
+.input-icon-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon-group input {
+    flex: 1;
+    padding-right: 35px; /* Platz für das Icon */
+}
+
+.input-icon-group i {
+    position: absolute;
+    right: 10px;
+    color: var(--txt-lg);
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.input-icon-group i:hover {
+    color: var(--s-blue);
+}
+
+.profile-info label {
+    font-weight: bold;
+    color: var(--txt-lg);
+}
+
+.profile-info input {
+    padding: 10px;
+    background-color: var(--gray);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    width: calc(100% - 20px);
+}
+
+.linked-accounts {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--dgo-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.linked-accounts h3 {
+    margin: 0 0 20px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.linked-account {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.linked-account input {
+    flex: 1;
+    padding: 10px;
+    background-color: var(--gray);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.copy-btn {
+    padding: 5px 10px;
+    background-color: var(--s-blue);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
