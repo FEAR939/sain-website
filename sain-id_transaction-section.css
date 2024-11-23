@@ -48,7 +48,7 @@
     color: #fff;
     font-size: 0.9em;
 }
-
+/*
 .status-active {
     background-color: var(--active-green);
 }
@@ -60,7 +60,7 @@
 .status-neutral {
     background-color: var(--lg);
 }
-
+*/
 /* Content der Transaktion */
 .transaction-details {
     padding: 15px;

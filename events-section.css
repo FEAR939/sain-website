@@ -29,7 +29,7 @@
     background-color: var(--dgo-bg);
     border-radius: 10px;
     width: 520px;
-    height: 416px;
+    height: 380px;
     text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -42,7 +42,7 @@
     padding-top: 40%; /* Entspricht einem Verhältnis von 1 : 2.5 (1 / 2.5 = 0.4) */
     position: relative;
     overflow: hidden;
-    border-radius: 10px; /* Optional: Rundung für die Bildecken */
+    border-radius: 10px 10px 0 0; 
 }
 
 .event-image {
