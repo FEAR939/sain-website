@@ -1,0 +1,25 @@
+Date:           24.11.2024  |   15:30 
+Edited by:      Ben Wilhelm
+Chnaged data:   sain_id_profile.html
+                sain_id_transactions.html
+                sain-id_section.css
+Chnage Info:    changed the class names from profile-section,... to sainid-section,...
+-------------------------------------------------------------------------------------------------------------
+Date:           24.11.2024  |   18:55
+Edited by:      Ben Wilhelm
+Chnaged data:   events_smcs_s9.html
+                sain_id_profile.html
+                sain_id_transactions.html
+                sain_id_purchases.html
+                styles.css
+                sain-id_section.css
+                sain-id_transaction-section.css
+                sain-id_purchase-section.css
+Chnage Info:    created sain_id_purchases.
+-------------------------------------------------------------------------------------------------------------
+Date:           _ 
+Edited by:      _
+Chnaged data:   _
+                _
+Chnage Info:    _
+-------------------------------------------------------------------------------------------------------------

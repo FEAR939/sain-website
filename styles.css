@@ -37,6 +37,10 @@
 /* Sain.ID Transactions Section */
 @import url("sain-id_transaction-section.css");
 
+/* Sain.ID Purchases Section */
+@import url("sain-id_purchase-section.css");
+
+
 /* Footer Overlay */
 @import url("footer.css");
 
@@ -166,6 +170,12 @@ body {
 /*
     =======================================
     ======== Sain.ID Transactions Section Stylesheet
+    =======================================
+*/
+
+/*
+    =======================================
+    ======== Sain.ID Purchases Section Stylesheet
     =======================================
 */
 

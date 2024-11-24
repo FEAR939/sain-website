@@ -1,0 +1,98 @@
+/*
+    Meta Information
+    -----------------
+    Author: Ben Wilhelm
+    Version: 1.0
+    Created: 2024-11-24
+    Description: CSS-Datei für den Sain.ID-Bereich der Sain Community Webseite.
+
+    -----------------
+*/
+
+/* Purchases Section */
+.purchases-embed {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid for cards */
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--dg-bg);
+    border-radius: 10px;
+}
+
+.purchase-card {
+    background-color: var(--dgo-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.purchase-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.purchase-banner {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+}
+
+.purchase-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.purchase-status {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: var(--active-green);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.purchase-status.inactive {
+    background-color: var(--inactive-red);
+}
+
+.purchase-details {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.purchase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.purchase-header h3 {
+    font-size: 1.1em;
+    color: #fff;
+    margin: 0;
+}
+
+.purchase-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.purchase-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    color: var(--txt-lg);
+    margin-top: auto;
+}
