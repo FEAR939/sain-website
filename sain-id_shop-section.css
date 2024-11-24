@@ -1,0 +1,86 @@
+/* Shop Section */
+
+/* Shop Grid */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Shop Cards */
+.shop-card {
+    background-color: var(--dg-bg);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.shop-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.shop-card h3 {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 15px 0;
+}
+
+.shop-card p {
+    color: var(--txt-lg);
+    font-size: 0.9em;
+}
+
+.shop-card .price {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--s-red);
+}
+
+.shop-card .btn {
+    margin-top: auto;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: var(--s-blue);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.shop-card .btn:hover {
+    background-color: var(--active-green);
+}
+
+/* Specific Card Styles */
+.prem-card {
+    background-color: var(--s-blue);
+}
+
+.prem-plus-card {
+    background-color: var(--s-red);
+}
+
+.support-card {
+    background-color: var(--smcs);
+}
+
+.minecraft-card {
+    text-align: left;
+}
+
+.coins-card {
+    background-color: var(--gray);
+}
