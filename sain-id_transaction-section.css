@@ -66,6 +66,10 @@
     padding: 15px;
 }
 
+.transaction-header {
+    position: relative;
+}
+
 .transaction-header h3 {
     margin: 0;
 }
@@ -74,6 +78,12 @@
     margin-top: 2px;
     font-style: italic;
     color: var(--txt-lg);
+}
+
+.transaction-header .transaction-logo {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .transaction-logo img {
@@ -85,13 +95,13 @@
 
 /* Metainformationen der Transaktion */
 .transaction-meta {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 20px;
     margin-top: 20px;
 }
 
 .transaction-meta ul {
+    width: 50%;
     list-style: none;
     padding: 15px;
     margin: 0;
@@ -101,21 +111,17 @@
     gap: 15px 40px;
     background-color: var(--dgo-bg);
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .transaction-meta li {
-    color: var(--txt-lg);
     display: flex;
     justify-content: space-between;
-}
-
-.transaction-meta li strong {
-    color: #fff;
-    margin-right: 5px;
+    color: var(--txt-lg);
 }
 
 .transaction-meta .value {
-    color: #00d2ff; /* Textfarbe für den hervorgehobenen Wert, wie "PayPal", "Completed", etc. */
+    color: var(--s-blue);
     cursor: pointer;
 }
 
@@ -143,13 +149,13 @@
 
 /* Text innerhalb der Transaktion */
 .transaction-text {
-    flex: 1.5;
+    width: 50%;
     background-color: var(--dgo-bg);
     padding: 15px;
     border-radius: 5px;
     color: var(--txt-lg);
 }
-  
+
 .transaction-text p {
     margin: 0;
 }
@@ -158,14 +164,13 @@
 .transaction-footer {
     margin-top: 20px;
     display: flex;
-    justify-content: space-evenly; /* Verteile die flex-items gleichmäßig mit gleichem Abstand */
     align-items: center;
     color: var(--txt-lg);
     font-size: 0.9em;
-    gap: 20px; /* Füge Abstand zwischen den drei flex-items hinzu */
 }
 
 .transaction-footer .transaction-info {
+    width: calc(25% - 7.5px);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -183,21 +188,33 @@
 }
 
 .transaction-footer .transaction-balance {
+    width: calc(25% - 7.5px);
     display: flex;
     align-items: center;
-    justify-content: center; /* Zentriere den Inhalt des Balances-Bereichs */
+    justify-content: flex-end; /* Zentriere den Inhalt des Balances-Bereichs */
     gap: 5px;
 }
 
 .transaction-footer .transaction-balance span {
-    color: var(--s-red);
+    color: var(--txt-lg);
     font-weight: bold;
+}
+
+.transaction-footer .transaction-balance span i {
+    background: linear-gradient(to bottom, var(--s-red), var(--s-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.transaction-footer .transaction-balance .transaction-amount {
+    color: var(--s-red);
 }
 
 .transaction-footer .transaction-actions {
     display: flex;
     align-items: center;
     justify-content: flex-end; /* Positioniere die Aktionen am rechten Rand des Containers */
+    margin-left: auto;
 }
 
 .transaction-footer .transaction-actions a {
@@ -212,4 +229,45 @@
 
 .transaction-footer .transaction-actions a:hover {
     color: var(--s-red);
+}
+
+@media only screen and (max-width: 1800px) {
+    .transaction-meta {
+        flex-direction: column;
+    }
+
+    .transaction-meta ul {
+        width: auto;
+    }
+
+    .transaction-text {
+        width: auto;
+    }
+
+    .transaction-footer {
+        position: relative;
+        height: 60px;
+    }
+
+    .transaction-footer .transaction-info {
+        width: 50%;
+    }
+
+    .transaction-footer .transaction-balance {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .transaction-footer .transaction-info {
+        position: absolute;
+        top: 40px;
+    }
+
+    .transaction-footer .transaction-actions {
+        position: absolute;
+        top: 40px;
+        right: 0;
+    }
 }
