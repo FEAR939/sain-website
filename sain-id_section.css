@@ -102,17 +102,14 @@
     color: var(--s-blue);
     border-radius: 5px;
 }
-.sainid-menu a {
+
+.sainid-menu .menu-item a {
     color: inherit;
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
-.sainid-menu .menu-item:hover a {
-    color: #fff; 
-} 
 
 .settings-item {
     display: flex;
@@ -138,6 +135,15 @@
     border-radius: 30px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-height: 85vh;
+}
+
+/* Section Header */
+.sainid-content-header {
+    display: flex;
+    justify-content: space-between; /* Abstand zwischen h2 und der Utility-Bar */
+    align-items: center; /* Vertikale Zentrierung */
+    margin-bottom: 10px; /* Abstand zur Trennlinie */
 }
 
 .sainid-content h2 {
@@ -145,3 +151,52 @@
     font-size: 1.2em;
 }
 
+/* Utility Bar */
+.sainid-utility-bar {
+    display: flex;
+    gap: 20px; /* Abstand zwischen den Icons */
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Utility Items */
+.utility-item {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Abstand zwischen Icon und Text */
+    cursor: pointer;
+}
+
+.utility-item i {
+    background: linear-gradient(to bottom, var(--s-red), var(--s-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Überschreibe das letzte Icon */
+.utility-item:last-child i {
+    background: none; /* Kein Hintergrundverlauf */
+    -webkit-text-fill-color: currentColor; /* Normale Textfarbe */
+    color: #fff; /* Falls benötigt, eine spezifische Farbe */
+}
+
+.utility-item:hover:first-child {
+    transform: translateY(-2px);
+    color: var(--s-blue);
+}
+
+/* Dynamische Anpassung */
+.utility-bonus, .utility-balance, .utility-action {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Trennlinie */
+.section-divider {
+    border: none;
+    height: 1px;
+    background-color: var(--gray); /* Farbe der Trennlinie */
+    margin: 10px 0; /* Abstand zur Trennlinie oben und unten */
+}

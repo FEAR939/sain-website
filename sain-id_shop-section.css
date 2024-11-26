@@ -3,9 +3,32 @@
 /* Shop Grid */
 .shop-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Always divide into 3 columns */
-    gap: 20px; /* Space between cards */
-    width: 100%; /* Ensure it spans the full width of the container */
+    grid-template-columns: repeat(3, 1fr); /* Immer 3 Spalten */
+    gap: 20px; /* Abstand zwischen den Karten */
+    width: calc(100% - 10px); /* Reduzierte Breite, um Platz für die Scrollbar zu schaffen */
+    max-height: 700px; /* Begrenze die maximale Höhe */
+    overflow-y: auto; /* Scrollbar aktivieren */
+    border-radius: 10px; /* Abrundung */
+    padding-right: 10px; /* Platz für die Scrollbar */
+    box-sizing: content-box; /* Padding wird außerhalb der Breite gezählt */
+}
+
+/* Optional: Für schönere Scrollbars */
+.shop-grid::-webkit-scrollbar {
+    width: 10px;
+}
+
+.shop-grid::-webkit-scrollbar-track {
+    background: var(--gray); /* Hintergrund der Scrollbar */
+}
+
+.shop-grid::-webkit-scrollbar-thumb {
+    background: var(--s-blue); /* Farbe der Scrollbar */
+    border-radius: 5px;
+}
+
+.shop-grid::-webkit-scrollbar-thumb:hover {
+    background: var(--active-green); /* Hover-Farbe der Scrollbar */
 }
 
 /* Shop Cards */
@@ -34,7 +57,7 @@
 }
 
 .shop-card-details {
-    padding: 20px;
+    padding: 15px;
 }
 .shop-card h3 {
     font-size: 1.2em;
