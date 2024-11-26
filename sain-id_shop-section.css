@@ -81,18 +81,19 @@
 }
 
 .shop-card .btn {
+    justify-self: flex-end;
     margin-top: auto;
     padding: 10px 20px;
-    font-size: 0.9em;
+    font-size: 1em;
     color: #fff;
-    background-color: var(--s-blue);
+    background-color: var(--dgo-bg);
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .shop-card .btn:hover {
-    background-color: var(--active-green);
+    background-color: var(--s-red);
 }
 
 
