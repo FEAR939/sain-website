@@ -34,10 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Highlight the current navigation link
         const links = navElement.querySelectorAll(".nav-links a");
-        const currentPage = window.location.pathname.split("/").pop(); // Get the current filename
+        const currentPath = window.location.pathname.toLowerCase();
 
         links.forEach(link => {
-            if (link.getAttribute("href") === currentPage) {
+            const linkHref = link.getAttribute("href").toLowerCase();
+            
+            // Check if the current path includes the base href of the link
+            if (currentPath.includes(linkHref.replace(".html", ""))) {
                 link.classList.add("current");
             }
         });
