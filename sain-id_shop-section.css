@@ -10,6 +10,7 @@
     overflow-y: auto; /* Scrollbar aktivieren */
     border-radius: 10px; /* Abrundung */
     padding-right: 10px; /* Platz für die Scrollbar */
+    padding-top: 10px; /* Platz für die Scrollbar */
     box-sizing: content-box; /* Padding wird außerhalb der Breite gezählt */
 }
 
@@ -42,6 +43,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%; /* Ensure the card spans full grid cell */
+    cursor: pointer;
 }
 
 .shop-card:hover {
@@ -51,9 +53,10 @@
 
 .shop-card img {
     width: 100%;
-    aspect-ratio: 21/9;
+    aspect-ratio: 32/9;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
+    object-position: top; /* Diese eingabe mus custom einstellbar sein je nach image (mögliche einbinde möglichkeit bei einem frontend design) */ 
 }
 
 .shop-card-details {
