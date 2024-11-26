@@ -17,6 +17,8 @@
 }
 
 .profile-banner {
+    display: flex;
+    flex-direction: column;
     position: relative;
 }
 
@@ -28,47 +30,13 @@
     object-fit: cover;
 }
 
-.profile-banner-controls {
-    position: absolute;
-    bottom: -50px; /* Align to the bottom of the profile picture */
-    right: 20px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.profile-banner-controls .daily-bonus,
-.profile-banner-controls .account-balance,
-.profile-banner-controls .profile-settings {
-    display: flex;
-    align-items: center;
-    font-size: 1.2em;
-    padding: 10px;
-    border-radius: 10px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.profile-banner-controls .daily-bonus span,
-.profile-banner-controls .account-balance span {
-    margin-right: 5px;
-}
-
-.profile-banner-controls .daily-bonus i,
-.profile-banner-controls .account-balance i {
-    background: linear-gradient(to bottom, var(--s-red), var(--s-blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.profile-banner-controls .profile-settings {
-    padding: 10px;
-    font-size: 1.5em;
+.profile-banner .sainid-utility-bar {
+    padding-top: 20px;
 }
 
 .profile-picture {
     position: absolute;
-    bottom: -50px;
+    top: 225px;
     left: 20px;
     width: 100px;
     height: 100px;
@@ -85,7 +53,7 @@
 
 .profile-details {
     display: flex;
-    margin-top: 80px;
+    margin-top: 30px;
     gap: 20px;
 }
 

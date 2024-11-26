@@ -173,6 +173,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    font-style: italic;
 }
 
 .transaction-footer .transaction-info img {
