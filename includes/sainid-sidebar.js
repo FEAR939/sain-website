@@ -20,8 +20,8 @@ const sidebarContent = `
         <li class="menu-item ${currentPage === 'sain_id_purchases.html' ? 'active' : ''}">
             <a href="sain_id_purchases.html"><i class="fas fa-shopping-cart"></i> Active purchases</a>
         </li>
-        <li class="menu-item ${currentPage === 'sain_id_badge.html' ? 'active' : ''}">
-            <a href="sain_id_badge.html"><i class="fas fa-certificate"></i> Badge</a>
+        <li class="menu-item ${currentPage === 'sain_id_badges.html' ? 'active' : ''}">
+            <a href="sain_id_badges.html"><i class="fas fa-certificate"></i> Badge</a>
         </li>
         <li class="menu-item ${currentPage === 'sain_id_shop.html' ? 'active' : ''}">
             <a href="sain_id_shop.html"><i class="fas fa-store"></i> Shop</a>

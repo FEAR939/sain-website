@@ -1,0 +1,47 @@
+.badge-category {
+    margin-bottom: 30px;
+}
+
+.badge-category h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.badge-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.badge-item {
+    width: 60px;
+    display: flex;
+    flex-direction: column; /* Elemente vertikal anordnen */
+    justify-content: center; /* Zentrierung innerhalb der Box */
+    align-items: center; /* Zentrierung innerhalb der Box */
+    gap: 5px; /* Abstand zwischen Bild und Text */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center; /* Text zentrieren */
+}
+
+.badge-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.badge-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 5px; 
+}
+
+.badge-item h4 {
+    font-size: 0.9rem;
+    color: #fff;
+    margin: 0;
+}
