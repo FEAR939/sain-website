@@ -101,7 +101,7 @@
 .auth-footer {
     display: flex;
     justify-content: space-between; /* Text links, Button rechts */
-    align-items: center; /* Vertikale Zentrierung */
+    align-items: flex-end; /* Vertikale Zentrierung */
     box-sizing: border-box;
     width: 100%;
 }
