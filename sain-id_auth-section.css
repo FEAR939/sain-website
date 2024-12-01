@@ -9,9 +9,8 @@
     color: white;
 }
 
-/* Container */
 .auth-container {
-    position: relative; /* Notwendig für absolute Positionierung der Footer */
+    position: relative; /* Ermöglicht die absolute Positionierung des Footers */
     background-color: var(--dgo-bg); /* Dunkler Hintergrund */
     padding: 20px;
     border-radius: 10px;
@@ -19,13 +18,17 @@
     height: 380px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex; /* Flexbox aktivieren */
+    flex-direction: column; /* Inhalte vertikal anordnen */
+    justify-content: space-between; /* Platz zwischen Header, Content und Footer */
+    align-items: center; /* Zentriert Inhalte horizontal */
 }
 
 /* Header mit Tabs und Logo */
 .auth-header {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
+    width: 100%;
 }
 
 .auth-header img {
@@ -56,21 +59,27 @@
     display: none; /* Standardmäßig ausgeblendet */
 }
 
+/* Auth Forms */
 .auth-form.active {
-    display: flex; /* Nur aktives Formular wird angezeigt */
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Vertikale Zentrierung innerhalb des mittleren Bereichs */
     gap: 20px;
     width: 100%;
+    flex-grow: 1; /* Füllt den Platz zwischen Header und Footer */
 }
 
 /* Form Groups */
 .form-group {
-    width: 370px;
+    display: flex; /* Flexbox aktivieren */
+    flex-direction: column; /* Inhalte vertikal anordnen */
+    justify-content: space-between; /* Platz zwischen Header, Content und Footer */
+    width: 350px;
 }
 
 .form-group label {
+    align-items: flex-start; /* Zentriert Inhalte horizontal */
     display: block;
     font-size: 0.9rem;
     margin-bottom: 5px;
@@ -78,6 +87,7 @@
 }
 
 .form-group input {
+    align-items: center; /* Zentriert Inhalte horizontal */
     width: 100%; /* Eingabefeld ebenfalls volle Breite */
     padding: 10px;
     font-size: 1rem;
@@ -89,15 +99,11 @@
 
 /* Footer-Bereich im Container */
 .auth-footer {
-    position: absolute; /* Absolut positioniert im Container */
-    bottom: 20px; /* Abstand zum unteren Rand */
-    left: 0;
-    right: 0;
     display: flex;
     justify-content: space-between; /* Text links, Button rechts */
     align-items: center; /* Vertikale Zentrierung */
-    padding: 0 20px; /* Abstand zu den Seiten */
     box-sizing: border-box;
+    width: 100%;
 }
 
 /* Hinweistext linksbündig */
