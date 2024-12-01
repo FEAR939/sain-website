@@ -51,7 +51,7 @@
 
 .auth-tab.active {
     color: var(--s-blue); /* Farbe für den aktiven Tab */
-    border-bottom: 2px solid var(--s-blue); /* Unterstrich für den aktiven Tab */
+    border-bottom: 1px solid var(--s-blue); /* Unterstrich für den aktiven Tab */
 }
 
 /* Auth Forms */
