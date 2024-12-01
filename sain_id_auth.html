@@ -18,7 +18,6 @@
                 <button class="auth-tab" id="log-in-tab">Log in</button>
             </div>
     
-            <!-- Sign-Up Form -->
             <form id="sign-in-form" class="auth-form active">
                 <div class="form-group">
                     <label for="display-name">Anzeigename</label>
@@ -32,25 +31,26 @@
                     <label for="password">Passwort</label>
                     <input type="password" id="password" name="password" required>
                 </div>
+                <div class="auth-footer">
+                    <p class="form-note">You can modify your SainID later</p>
+                    <button type="submit" class="auth-button">Create your Sain.ID</button>
+                </div>
             </form>
+            
     
-            <!-- Log-In Form -->
             <form id="log-in-form" class="auth-form">
                 <div class="form-group">
                     <label for="log-email">Email</label>
-                    <input type="email" id="log-email" name="email" required>
+                    <input type="email" id="log-email" name="log-email" required>
                 </div>
                 <div class="form-group">
                     <label for="log-password">Passwort</label>
-                    <input type="password" id="log-password" name="password" required>
+                    <input type="password" id="log-password" name="log-password" required>
+                </div>
+                <div class="auth-footer">
+                    <button type="submit" class="auth-button">Access your Sain.ID</button>
                 </div>
             </form>
-
-            <!-- Footer für Sign-Up -->
-            <div class="auth-footer">
-                <p class="form-note">You can modify your SainID later</p>
-                <button type="submit" class="auth-button">Create your Sain.ID</button>
-            </div>
         </div>
     </section>
     

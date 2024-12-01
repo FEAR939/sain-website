@@ -113,9 +113,121 @@
     margin: 0; /* Kein zusätzlicher Abstand */
 }
 
-/* Auth-Button */
+/* Auth Section mit Hintergrundbild */
+.auth-section {
+    position: relative;
+    height: 100vh;
+    background: url('source/images/Sain_Magenta_Cyan_Bear_Wallpaper.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.auth-container {
+    position: relative; /* Ermöglicht die absolute Positionierung des Footers */
+    background-color: var(--dgo-bg); /* Dunkler Hintergrund */
+    padding: 20px;
+    border-radius: 10px;
+    width: 700px;
+    height: 380px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex; /* Flexbox aktivieren */
+    flex-direction: column; /* Inhalte vertikal anordnen */
+    justify-content: space-between; /* Platz zwischen Header, Content und Footer */
+    align-items: center; /* Zentriert Inhalte horizontal */
+}
+
+/* Header mit Tabs und Logo */
+.auth-header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.auth-header img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Styling für die Toggle-Tabs */
+.auth-tab {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.auth-tab.active {
+    color: var(--s-blue); /* Farbe für den aktiven Tab */
+    border-bottom: 1px solid var(--s-blue); /* Unterstrich für den aktiven Tab */
+}
+
+/* Auth Forms */
+.auth-form {
+    display: none; /* Standardmäßig ausgeblendet */
+}
+
+/* Auth Forms */
+.auth-form.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Vertikale Zentrierung innerhalb des mittleren Bereichs */
+    gap: 20px;
+    width: 100%;
+    flex-grow: 1; /* Füllt den Platz zwischen Header und Footer */
+}
+
+/* Form Groups */
+.form-group {
+    display: flex; /* Flexbox aktivieren */
+    flex-direction: column; /* Inhalte vertikal anordnen */
+    justify-content: space-between; /* Platz zwischen Header, Content und Footer */
+    width: 350px;
+}
+
+.form-group label {
+    align-items: flex-start; /* Zentriert Inhalte horizontal */
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    text-align: left; /* Links ausgerichtet */
+}
+
+.form-group input {
+    align-items: center; /* Zentriert Inhalte horizontal */
+    width: 100%; /* Eingabefeld ebenfalls volle Breite */
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+.auth-footer {
+    display: flex;
+    justify-content: space-between; /* Abstand zwischen Text und Button */
+    align-items: center;
+    width: 100%;
+}
+
+/* Hinweistext linksbündig */
+.form-note {
+    font-size: 0.9rem;
+    color: white;
+    margin: 0; /* Kein zusätzlicher Abstand */
+}
+
 .auth-button {
-    width: 200px; /* Feste Breite */
+    width: 200px;
     padding: 10px;
     font-size: 1rem;
     font-weight: 900;
@@ -126,7 +238,6 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-align: center;
-    margin-left: auto; /* Erzwingt rechtsbündige Position */
 }
 
 .auth-button:hover {

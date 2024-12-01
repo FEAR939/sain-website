@@ -7,11 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Funktion: Aktiven Tab wechseln
     const toggleTabs = (activeTab, inactiveTab, activeForm, inactiveForm) => {
-        // Aktiven Tab und Formular aktivieren
         activeTab.classList.add('active');
         activeForm.classList.add('active');
-
-        // Inaktiven Tab und Formular deaktivieren
         inactiveTab.classList.remove('active');
         inactiveForm.classList.remove('active');
     };
@@ -27,29 +24,63 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Event Listener für das Sign-Up-Formular
-    signInForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+    signInForm.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Verhindert das Neuladen der Seite
         const displayName = document.getElementById('display-name').value;
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
         if (displayName && email && password) {
-            alert('Sign-Up erfolgreich!');
-            // Hier kannst du die Daten an dein Backend senden
+            try {
+                const response = await fetch('/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ displayName, email, password }),
+                });
+
+                const result = await response.json();
+                alert(result.message);
+
+                if (response.ok) {
+                    window.location.href = `/sain_id_profile.html?email=${email}`;
+                }
+            } catch (error) {
+                console.error('Fehler beim Sign-Up:', error);
+                alert('Es ist ein Fehler aufgetreten.');
+            }
         } else {
             alert('Bitte alle Felder ausfüllen!');
         }
     });
 
     // Event Listener für das Log-In-Formular
-    logInForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+    logInForm.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Verhindert das Neuladen der Seite
         const email = document.getElementById('log-email').value;
         const password = document.getElementById('log-password').value;
 
         if (email && password) {
-            alert('Log-In erfolgreich!');
-            // Hier kannst du die Daten an dein Backend senden
+            try {
+                const response = await fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email, password }),
+                });
+
+                const result = await response.json();
+                alert(result.message);
+
+                if (response.ok) {
+                    window.location.href = `/sain_id_profile.html?email=${email}`;
+                }
+            } catch (error) {
+                console.error('Fehler beim Log-In:', error);
+                alert('Es ist ein Fehler aufgetreten.');
+            }
         } else {
             alert('Bitte alle Felder ausfüllen!');
         }
