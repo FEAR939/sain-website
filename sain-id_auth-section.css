@@ -1,0 +1,128 @@
+/* Auth Section mit Hintergrundbild */
+.auth-section {
+    position: relative;
+    height: 100vh;
+    background: url('source/images/Sain_Magenta_Cyan_Bear_Wallpaper.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Container */
+.auth-container {
+    position: relative; /* Notwendig für absolute Positionierung der Footer */
+    background-color: var(--dgo-bg); /* Dunkler Hintergrund */
+    padding: 20px;
+    border-radius: 10px;
+    width: 700px;
+    height: 380px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Header mit Tabs und Logo */
+.auth-header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.auth-header img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Styling für die Toggle-Tabs */
+.auth-tab {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.auth-tab.active {
+    color: var(--s-blue); /* Farbe für den aktiven Tab */
+    border-bottom: 2px solid var(--s-blue); /* Unterstrich für den aktiven Tab */
+}
+
+/* Auth Forms */
+.auth-form {
+    display: none; /* Standardmäßig ausgeblendet */
+}
+
+.auth-form.active {
+    display: flex; /* Nur aktives Formular wird angezeigt */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Form Groups */
+.form-group {
+    width: 370px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    text-align: left; /* Links ausgerichtet */
+}
+
+.form-group input {
+    width: 100%; /* Eingabefeld ebenfalls volle Breite */
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+/* Footer-Bereich im Container */
+.auth-footer {
+    position: absolute; /* Absolut positioniert im Container */
+    bottom: 20px; /* Abstand zum unteren Rand */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between; /* Text links, Button rechts */
+    align-items: center; /* Vertikale Zentrierung */
+    padding: 0 20px; /* Abstand zu den Seiten */
+    box-sizing: border-box;
+}
+
+/* Hinweistext linksbündig */
+.form-note {
+    font-size: 0.9rem;
+    color: white;
+    margin: 0; /* Kein zusätzlicher Abstand */
+}
+
+/* Auth-Button */
+.auth-button {
+    width: 200px; /* Feste Breite */
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 900;
+    background-color: var(--dg-bg);
+    color: var(--s-blue);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-left: auto; /* Erzwingt rechtsbündige Position */
+}
+
+.auth-button:hover {
+    color: var(--s-red);
+}

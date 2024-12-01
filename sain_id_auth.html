@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Sain Community - SainID Conection</title> 
+</head>
+
+<body>
+    <header>
+        <div id="main-navigation"></div>
+    </header>
+
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-header">
+                <button class="auth-tab active" id="sign-in-tab">Sign up</button>
+                <img src="source/logos/SainID_Logo.png" alt="Sain Logo">
+                <button class="auth-tab" id="log-in-tab">Log in</button>
+            </div>
+    
+            <!-- Sign-Up Form -->
+            <form id="sign-in-form" class="auth-form active">
+                <div class="form-group">
+                    <label for="display-name">Anzeigename</label>
+                    <input type="text" id="display-name" name="display-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Passwort</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <!-- Footer für Sign-Up -->
+                <div class="auth-footer">
+                    <p class="form-note">You can modify your SainID later</p>
+                    <button type="submit" class="auth-button">Create your Sain.ID</button>
+                </div>
+            </form>
+    
+            <!-- Log-In Form -->
+            <form id="log-in-form" class="auth-form">
+                <div class="form-group">
+                    <label for="log-email">Email</label>
+                    <input type="email" id="log-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="log-password">Passwort</label>
+                    <input type="password" id="log-password" name="password" required>
+                </div>
+                <!-- Footer für Log-In -->
+                <div class="auth-footer">
+                    <!-- Der Hinweistext erscheint nur beim Sign-Up -->
+                    <button type="submit" class="auth-button">Access your Sain.ID</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    
+
+
+    <footer>
+        <div id="main-footer"></div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="includes/head.js"></script>
+    <script src="includes/main-navigation.js"></script>
+
+    <script src="includes/sainid_auth.js"></script>
+
+    <script src="includes/footer.js"></script>
+</body>
+
+</html>

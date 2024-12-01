@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "title": "Sommer-Event",
+        "date": "2024-06-21",
+        "location": "Berlin"
+    },
+    {
+        "id": 2,
+        "title": "Winter-Event",
+        "date": "2024-12-15",
+        "location": "M\u00fcnchen"
+    }
+]
