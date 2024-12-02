@@ -19,15 +19,24 @@ const USERS_FILE = path.join(__dirname, 'data', 'users.json');
 
 // Helper-Funktion: Benutzer aus JSON-Datei lesen
 const getUsers = () => {
-    if (!fs.existsSync(USERS_FILE)) {
-        fs.writeFileSync(USERS_FILE, JSON.stringify([])); // Datei erstellen, falls sie nicht existiert
+    try {
+        if (!fs.existsSync(USERS_FILE)) {
+            fs.writeFileSync(USERS_FILE, JSON.stringify([])); // Datei erstellen, falls sie nicht existiert
+        }
+        return JSON.parse(fs.readFileSync(USERS_FILE, 'utf8') || '[]');
+    } catch (error) {
+        console.error('Fehler beim Lesen der Benutzerdatei:', error);
+        return [];
     }
-    return JSON.parse(fs.readFileSync(USERS_FILE, 'utf8') || '[]');
 };
 
 // Helper-Funktion: Benutzer in JSON-Datei speichern
 const saveUsers = (users) => {
-    fs.writeFileSync(USERS_FILE, JSON.stringify(users, null, 2));
+    try {
+        fs.writeFileSync(USERS_FILE, JSON.stringify(users, null, 2));
+    } catch (error) {
+        console.error('Fehler beim Speichern der Benutzerdatei:', error);
+    }
 };
 
 // API: Benutzer-Registrierung (Sign-Up)
@@ -46,11 +55,21 @@ app.post('/signup', (req, res) => {
         return res.status(400).json({ message: 'Diese Email ist bereits registriert.' });
     }
 
-    // Benutzer hinzufügen
-    users.push({ displayName, email, password });
+    // Benutzer hinzufügen, mit Platzhaltern für optionale Felder
+    const newUser = {
+        displayName,
+        email,
+        password,
+        firstName: 'Vorname nicht angegeben',
+        lastName: 'Nachname nicht angegeben',
+        birthday: 'Geburtsdatum nicht angegeben',
+        linkedAccounts: [] // Leere verknüpfte Konten
+    };
+
+    users.push(newUser);
     saveUsers(users);
 
-    res.status(201).json({ message: 'Registrierung erfolgreich.' });
+    res.status(201).json({ message: 'Registrierung erfolgreich.', user: newUser });
 });
 
 // API: Benutzer-Login

@@ -2,8 +2,9 @@
     Meta Information
     -----------------
     Author: Ben Wilhelm
-    Version: 1.2.1
+    Version: 1.2.2
     Created: 2024-11-18
+    Updated: 2024-12-01
     Description: CSS-Datei für den Sain.ID-Bereich der Sain Community Webseite.
 
     -----------------
@@ -65,42 +66,27 @@
     width: 650px;
 }
 
-.input-group {
+.info-group {
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
-.input-group label {
-    font-weight: bold;
+.info-group label {
+    font-size: 0.9rem;
+    font-style: italic;
     color: var(--txt-lg);
     margin-bottom: 5px;
 }
 
-.input-group input {
-    padding: 10px;
+.info-value {
+    padding: 8px;
     background-color: var(--gray);
-    border: none;
     border-radius: 5px;
     color: #fff;
     width: 100%;
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-.input-group input:focus {
-    box-shadow: 0 0 10px var(--s-blue);
-    outline: none;
-}
-
-.input-icon-group {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.input-icon-group input {
-    flex: 1;
-    padding-right: 35px; /* Platz für das Icon */
+    box-sizing: border-box;
+    font-size: 1rem;
 }
 
 .input-icon-group i {
@@ -113,20 +99,6 @@
 
 .input-icon-group i:hover {
     color: var(--s-blue);
-}
-
-.profile-info label {
-    font-weight: bold;
-    color: var(--txt-lg);
-}
-
-.profile-info input {
-    padding: 10px;
-    background-color: var(--gray);
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    width: calc(100% - 20px);
 }
 
 .linked-accounts {
