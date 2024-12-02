@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const navHTML = `
         <nav class="main-nav">
             <div class="logo">
-                <img src="source/logos/Sain_Logo_circle_white_protection_zone_SVG.svg" alt="Sain Logo" class="logo-img">
+                <img src="source/logos/Sain_Logo_circle_white_protection_zone_SVG.svg" alt="Sain Logo" class="logo-img" id="logo-link">
             </div>
             <div class="nav-links-container">
                 <ul class="nav-links">
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <input type="text" placeholder="Search..." class="search-bar">
                     <i class="search-icon fas fa-search"></i>
                 </div>
-                <div class="user-info">
+                <div class="user-info" id="user-info-link">
                     <span class="user-name">Ben.Sain</span>
                     <img src="source/images/FuK9icGaYAE13GS-scaled.jpeg" alt="Benutzerprofil" class="user-icon">
                 </div>
@@ -44,5 +44,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 link.classList.add("current");
             }
         });
+
+        // Add event listener to logo for redirecting to homepage
+        const logoLink = document.getElementById("logo-link");
+        if (logoLink) {
+            logoLink.addEventListener("click", () => {
+                window.location.href = "index.html";
+            });
+        }
+
+        // Add event listener to user-info for redirecting to SainID auth page
+        const userInfoLink = document.getElementById("user-info-link");
+        if (userInfoLink) {
+            userInfoLink.addEventListener("click", () => {
+                window.location.href = "sain_id_auth.html";
+            });
+        }
     }
 });

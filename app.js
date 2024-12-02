@@ -63,6 +63,8 @@ app.post('/signup', (req, res) => {
         firstName: 'Vorname nicht angegeben',
         lastName: 'Nachname nicht angegeben',
         birthday: 'Geburtsdatum nicht angegeben',
+        profileBanner: 'source/images/default-banner.jpg',
+        profilePicture: 'source/images/default-profile.jpg',
         linkedAccounts: [] // Leere verknüpfte Konten
     };
 
@@ -99,8 +101,13 @@ app.get('/profile', (req, res) => {
         return res.status(404).json({ message: 'Benutzer nicht gefunden.' });
     }
 
+    // Standardbilder setzen, wenn sie fehlen
+    user.profileBanner = user.profileBanner || 'source/images/default-banner.jpg';
+    user.profilePicture = user.profilePicture || 'source/images/default-profile.jpg';
+
     res.status(200).json(user);
 });
+
 
 // Server starten
 app.listen(PORT, () => {

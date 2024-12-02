@@ -1,7 +1,13 @@
 [
   {
-    "displayName": "Ben.Sain",
-    "email": "wilhelmb.21@test.com",
-    "password": "Test123"
-  }
+    "displayName": "SainTest1",
+    "email": "SainTest1_@E",
+    "password": "SainTest1_P",
+    "firstName": "Vorname nicht angegeben",
+    "lastName": "Nachname nicht angegeben",
+    "birthday": "Geburtsdatum nicht angegeben",
+    "profileBanner": "source/images/default-banner.jpg",
+    "profilePicture": "source/images/default-profile.jpg",
+    "linkedAccounts": []
+}
 ]
